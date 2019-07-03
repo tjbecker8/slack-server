@@ -1,8 +1,8 @@
-const db_message = require('../models/channel')
+const db_channel = require('../models/channel')
 
 module.exports = (req, res) => {
-	db_message.create({
-		name: 'yay'
+	db_channel.create({
+		channelName: 'yay'
 	}).then((data) => {
 		res.send(data)
 	}).catch((err)=>{

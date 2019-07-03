@@ -1,8 +1,8 @@
 const db = require('../db')
 
 
-const db_message = db.model('message', {
-	name: String
+const db_channel = db.model('channel', {
+	channelName: String
 })
 
-module.exports = db_message
+module.exports = db_channel
