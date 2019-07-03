@@ -3,10 +3,10 @@ const bodyParser = require('body-parser')
 
 
 require('dotenv').config()
-
+require('./db')
 const app = express()
 
-require('./db')
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
