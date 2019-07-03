@@ -4,9 +4,11 @@ const app = express()
 
 require('dotenv').config()
 
+require('./db')
 
-app.get('/api/messages', require('./controllers/get_messages.js'))
-app.post('/api/messages', require('./controllers/post_message.js'))
+
+app.get('/api/messages', require('./controllers/get_messages'))
+app.post('/api/messages', require('./controllers/post_message'))
 
 
 
