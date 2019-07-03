@@ -1,4 +1,5 @@
 const db = require('../db')
+const mongoose = require('mongoose')
 
 
 const db_message = db.model('message', {
@@ -13,7 +14,13 @@ const db_message = db.model('message', {
 	body: {
 		type: String,
 		required: [true, 'Message body is required']
-	}
+	},
+	channel: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'channel',
+		required: [true, 'Message channel is required']
+	},
+
 })
 
 module.exports = db_message
