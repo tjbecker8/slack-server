@@ -9,6 +9,7 @@ require('./db')
 
 app.get('/api/messages', require('./controllers/get_messages'))
 app.post('/api/messages', require('./controllers/post_message'))
+app.post('/api/messages', require('./controllers/post_channel'))
 
 
 
