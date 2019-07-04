@@ -17,6 +17,7 @@ app.get('/api/channel', require('./controllers/get_channel'))
 app.post('/api/channel', require('./controllers/post_channel'))
 
 app.post('/api/signup', require('./controllers/post_user'))
+app.get('/api/signup', require('./controllers/get_users'))
 
 
 
