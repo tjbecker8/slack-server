@@ -6,7 +6,7 @@ const db_message = db.model('message', {
 	author: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'user',
-		required: true
+		required: [true, 'user is required']
 	},
 	date: {
 		type: Date,
