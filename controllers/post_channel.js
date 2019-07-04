@@ -9,6 +9,8 @@ module.exports = (req, res) => {
 			}).catch((err)=>{
 				res.send(err)
 			})
+		} else {
+			res.send('token required')
 		}
 	})
 	// res.send('message created')
