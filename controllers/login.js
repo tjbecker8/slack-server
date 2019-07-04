@@ -12,7 +12,7 @@ module.exports = (req, res) => {
 			//match passwords encrypted to the one in the database
 			bcrypt.compare(req.body.password, user.password, (err, match) => {
 				if (match) {
-					let token =jwt.sign(user.toObject(), 'abc') //thats your token
+					let token =jwt.sign(user.toObject(), process.env.SECRET) //thats your token
 					res.status(200).json({
 						message: 'you are logged in',
 						token: token
