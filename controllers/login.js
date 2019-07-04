@@ -9,11 +9,11 @@ module.exports = (req, res) => {
 			//if email found, encrypt password,
 			//match passwords encrypted to the one in the database
 			bcrypt.compare(req.body.password, user.password, (err, match) => {
-				if (err) {
-					res.send('invalid password')
-				} else {
-					//if passwords match, respond ok
+				if (match) {
+					
 					res.send('you are logged in')
+				} else {
+					res.send('invalid password')
 				}
 			})
 		} else {
