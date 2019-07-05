@@ -6,7 +6,7 @@ module.exports = (req, res) => {
 	if (req.query && req.query.channel) {
 		q.channel = req.query.channel
 	}
-	db_message.find({q}).populate({
+	db_message.find(q).populate({
 		path: 'channel',
 		select: 'channelName'
 	}).populate({
